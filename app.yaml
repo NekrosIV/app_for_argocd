@@ -18,7 +18,7 @@ spec:
         - name: app1-container
           image: pscala/app1:v1
           ports:
-            - containerPort: 80
+            - containerPort: 8888
 ---
 apiVersion: v1
 kind: Service
