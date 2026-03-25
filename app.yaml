@@ -3,8 +3,13 @@ kind: Deployment
 metadata:
   name: app1-deployment
   namespace: dev
+  labels:
+    app: app1
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: app1
   template:
     metadata:
       labels:
@@ -22,10 +27,10 @@ metadata:
   name: app1-service
   namespace: dev
 spec:
-  type: LoadBalancers
+  type: LoadBalancer
   selector:
     app: app1
   ports:
     - protocol: TCP
-      port: 6666
+      port: 6767
       targetPort: 80
