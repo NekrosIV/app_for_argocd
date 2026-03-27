@@ -32,7 +32,7 @@ spec:
     app: app1
   ports:
     - protocol: TCP
-      port: 6767
+      port: 80
       targetPort: 80
 ---
 apiVersion: networking.k8s.io/v1
@@ -51,4 +51,4 @@ spec:
               service:
                 name: app1-service
                 port:
-                  number: 6767
+                  number: 80
